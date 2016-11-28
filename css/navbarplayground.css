@@ -6,7 +6,7 @@ ul.topnav {
     padding 0px;
     overflow: hidden;
     background: linear-gradient(#0a161c, black);
-    position: fixed; /* Make it stick, even on scroll */
+    position: fixed; 
     top: 0;
     left: 0;
     height: 60px;
@@ -116,7 +116,7 @@ border-radius:5px;
 	font-weight: bold;
 	text-align: center; 
 	color: #1A2930; 
-	font-size: 90px;
+	font-size: 80px;
 }
 
 .helloIn {
@@ -124,7 +124,7 @@ border-radius:5px;
 	}
 
 .portfolioBody {
-	min-width: 600px;
+	min-width: 500px;
 	
 }
 
