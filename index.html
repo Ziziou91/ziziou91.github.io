@@ -4,8 +4,9 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
-	<meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" type="text/css" href="css/navbarplayground.css">    
+	<meta name="viewport" content="initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">  
+    <link rel="stylesheet" type="text/css" href="css/contact.css">  
 <!--Javascript starts here--!>  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
@@ -18,7 +19,8 @@ function myFunction() {
         x.className = "topnav";
     }
 }
-/*hello fade in*/
+
+ /*hello fade in*/   
 window.onload =setTimeout(mySec, 1000);
 function mySec(){
     $(".helloIn").fadeIn(1000);};
@@ -29,13 +31,17 @@ function myThi(){
 /*welcome message fade in*/
 window.onload =setTimeout(myFunction, 2500);
 function myFunction(){
-     $(".welcome").fadeIn(1000);};
-/*portrait fade in*/
-window.onload =setTimeout(myPic, 3500);
+     $(".helloIn2").fadeIn(1000);};
+/*portfolio text fade in*/
+window.onload =setTimeout(myPort, 3500);
+function myPort(){
+     $(".portfolio-button-fade").fadeIn(1000);};
+/*portfolio arrow fade in*/
+window.onload =setTimeout(myPic, 4000);
 function myPic(){
-     $(".portrait").fadeIn(1000);};
+     $(".portfolio-arrow").fadeIn(1000);};     
 /*rest of the page fade in*/
-window.onload =setTimeout(rest, 4500);
+window.onload =setTimeout(rest, 4000);
 function rest(){
      $(".content").fadeIn(1000);};
 /*CONTACT FORM SENDING TEXT*/
@@ -65,83 +71,106 @@ if(send) {
 </ul>
 
 <!-- ABOUT --!>
-<div id="about"min-width: 500px;/>
-<div style="margin-top: 80px;">
-		<div class="flex-about">
-			<div style="width: 600px; height: 450px; margin-top: 20px; min-width: 500px;">
-				<div class="hello">
+<div id="about"/>
+<div class="welcome">
+	<div>
+		<div class="welcome-text">
+			<div class="hello">
 				<h1 class="helloIn">HELLO</h1>
-				</div>
-				<div class="h-divider2" style="width: 550px; margin-left: 25px; margin-top:-115px; min-width: 200px;"></div>
-				
-				<h2 class="welcome" style="color: #1A2930; text-align: center; font-size: 80px; margin-top: 35px; line-height: 98%;">WELCOME TO MY WEBSITE</h2>
-				
-			</div> 
-			<div style="width: 400px; margin-right: 50px; padding-top: 50px; margin-top: -20px;">
-				<img class="portrait" style="width: 450px; border-radius: 50%; margin-top: -40px; margin-bottom: -10px;" src="http://res.cloudinary.com/diohwb5lp/image/upload/v1480374579/me_brighton_xxcsdh.jpg">
+			</div>
+			<div class="h-divider2"></div>
+			<h2 class="helloIn2">WELCOME TO MY WEBSITE</h2>
+		</div>	
+	</div>
+	<div>
+		<div class="portfolio-button-container">
+			<div class="portfolio-button"><a href="#portfolio" style="text-decoration: none;">
+				<h2 class="portfolio-button-fade" style="text-align: center;">Portfolio</h2>
+				<img class="portfolio-arrow" src="http://res.cloudinary.com/diohwb5lp/image/upload/v1496771179/down-arrow_o5phwd.png" alt="Link to YouTube page"></a>
 			</div>
 		</div>
-	
+	</div>
+</div>	
+<div class="overlay"/>
 			
 <!-- THIS DIV IS FOR THE CONTENT FADE IN--!> 
-<div id="portfolio"/>
+<div  id="portfolio"/>
 	<div class="content">
 <!-- PORTFOLIO CONTENT --!>
 		<div class="flex-about">	
 			<div class="headbox" style=" margin-top: 25px; width: 1250px; min-width: 500px;">
-				<div class="flex-about">
-					<h3 style="text-align: center; color: #1A2930; font-size: 23px; margin-top: 30px;">I have put this page together to showcase projects I have worked on recently.
-					<br> Check out the samples and contact me using the form below.
-					</h3>
+				<div class="flex-about" style="text-align: left; width: 100%;">
 						<div class="h-divider" style="width: 80%; margin-top: 0px; min-width: 500px;">
 						</div>
 				</div>
-				<h2 style="font-size: 60px; margin-top: 10px;">PORTFOLIO</h2>
-			
-<!-- SUN RA TRIBURE PAGE--!>
-				<div class="flex-about" style="margin-top: -50px;">
-					<div style="width: 600px; height: 450px; min-width: 500px; margin-bottom: -50px;">
+
+<!-- ABOUT THIS PAGE--!>
+				<div class="flex-reverse">
+					<div class="port-text" style="margin-bottom: -10vw;">
+						<h2 style="font-size: 40px; text-align: left;">ABOUT THIS SITE</h2> 
+						<p style="text-align: justify;">My goal whilst creating this portfolio was to make a responsive website without bootstrap and further my understanding of HTML and CSS. My eventual goal is to remove all flex-box instances and use only @media queries to control what the page looks like on different screen sizes. It took me longer than expected, but was always enjoyable, and has made me appreciate just how powerful HTML and CSS really are.							
+						</P>
+					</div>
+				</div>		
+				
+<!-- CAD-TEC--!>
+
+				<div class="flex-about">
+					<div class="port-text">
+							<a class="port" href="http://www.cad-tec.co.uk/">	
+							<h2 style="text-align: left;">CAD-TEC</h2>
+							</a>
+							<p style="text-align: justify;">This is the first website I made working as a freelancer, and what a great learning experience it was. I decided early in the project I wanted to use Bootstrap to demonstrate I could use the framework to a professional standard. It was only part way through the project the client and I felt a responsive design was the way to go, and I learnt the hard way why it's called "mobile-first". Overall, I learnt a huge amount working on this project, and am very proud of the finished product.
+							</P>
+							<button class="portbtn" type="button" onclick=location.href="http://www.cad-tec.co.uk/">VISIT THIS PAGE</button>
+					</div>
+					<div class="port-image">
 						<a href="http://codepen.io/Zizou91/pen/BLXVMW">	
-						<img style="margin-top: 10px; min-width: 500px;" src="http://res.cloudinary.com/diohwb5lp/image/upload/v1480268193/Sun_Ra_600_aum1zs.jpg"alt="Image of Sun Ra tribute page">
+						<img style="width: 100%; height: auto;" src="http://res.cloudinary.com/diohwb5lp/image/upload/v1496871387/cad-tec.jpg"alt="Screenshot of responsive website I made for Cad-Tec">
 						</a>
 					</div>
-					<div style="width: 600px; height: 450px; min-width: 500px; margin-top: -30px;">
+				</div>					
+			
+<!-- SUN RA TRIBUTE PAGE--!>
+
+				<div class="flex-reverse">
+					
+					<div class="port-text">
 							<a class="port" href="http://codepen.io/Zizou91/pen/BLXVMW">	
-							<h2 style="font-size: 40px; text-align: left;">SUN RA TRIBUTE PAGE</h2>
+							<h2 style="text-align: left;">SUN RA TRIBUTE PAGE</h2>
 							</a>
-							<div class="h-divider" style="width: 100%; margin-top: -15px; min-width: 500px;">
-							</div>
 							<p style="text-align: justify;">I put this website together as part of a project on Free Code Camp. It was the first website I designed using bootstrap, and the goal was to demonstrate aspects I had been utilising in previous exercises. In particular, I wanted to use the responsive grid system and image thumbnails to create an article that might be found on a music blog. While creating this page, I learnt a lot about the strengths and limitations of using a framework and the importance of having a clear design brief before starting.
 							</P>
 							<button class="portbtn" type="button" onclick=location.href="http://codepen.io/Zizou91/pen/mOPPOO">VISIT THIS PAGE</button>
 					</div>
+					<div class="port-image">
+						<a href="http://codepen.io/Zizou91/pen/BLXVMW">	
+						<img style="width: 100%; height: auto;" src="http://res.cloudinary.com/diohwb5lp/image/upload/v1480268193/Sun_Ra_600_aum1zs.jpg"alt="Image of Sun Ra tribute page">
+						</a>
+					</div>
 				</div>		
 <!-- SMART LABELLING WEBSITE --!>
-				<div class="flex-reverse" style="margin-top: -35px;">
-					<div style="width: 600px; height: 450px; min-width: 500px; margin-top; 10px;">
+				<div class="flex-about">
+					<div class="port-text">
 							<a class="port" href="http://www.smartlabelling.co.uk/">	
 							<h2 style="font-size: 40px; text-align: left;">SMART LABELLING SITE</h2>
 							</a>
 							<div class="h-divider" style="width: 100%; margin-top: -15px; min-width: 500px;">
 							</div>
-							<p style="text-align: justify;">During my time with Smart Labeling I was with redesigning the e-commerce website to give it a more contemporary feel. I was given a design brief to keep within the companies branding, and I learnt about the importance of creating a consistent message and user experience. In addition, I also made the website responsive, significantly increasing traffic from mobile and tablet devices. 
+							<p style="text-align: justify;">During my time with Smart Labeling I was tasked with redesigning the e-commerce website to give it a more contemporary feel. I was given a design brief to keep within the companies branding, and I learnt about the importance of creating a consistent message and user experience. In addition, I also made the website responsive, significantly increasing traffic from mobile and tablet devices. 
 							</P>
 							<button class="portbtn" type="button" onclick=location.href="http://www.smartlabelling.co.uk/">VISIT THIS PAGE</button>
 					</div>
-					<div style="width: 600px; height: 450px; min-width: 500px; margin-bottom: -50px; margin-top: -50px;">
+					<div class="port-image">
 						<a href="http://www.smartlabelling.co.uk/">	
-						<img style="margin-top: 10px; min-width: 500px;" src="http://res.cloudinary.com/diohwb5lp/image/upload/v1480273489/Smartlabelling_Web_600_iyrecx.jpg"alt="Image of Smart Labelling e-commerce site">
+						<img style="width: 100%; height: auto;" src="http://res.cloudinary.com/diohwb5lp/image/upload/v1480273489/Smartlabelling_Web_600_iyrecx.jpg"alt="Image of Smart Labelling e-commerce site">
 						</a>
 					</div>
 				</div>		
 <!-- DENTAL CARDS WEBSITE --!>
-				<div class="flex-about">
-					<div style="width: 600px; height: 450px; min-width: 500px; margin-bottom: -50px;">
-						<a href="http://www.dentalcards.co.uk/">	
-						<img style="margin-top: 10px; min-width: 500px;" src="http://res.cloudinary.com/diohwb5lp/image/upload/v1480280214/Dentalcards_Web_iken9n.jpg"alt="Image of Sun Ra tribute page">
-						</a>
-					</div>
-					<div style="width: 600px; height: 450px; min-width: 500px; margin-top: -30px;">
+				<div class="flex-reverse" >
+					
+					<div class="port-text">
 							<a class="port" href="http://www.dentalcards.co.uk/">	
 							<h2 style="font-size: 40px; text-align: left;">DENTAL CARDS SITE</h2>
 							</a>
@@ -152,55 +181,38 @@ if(send) {
 							<button class="portbtn" type="button" onclick=location.href="http://www.dentalcards.co.uk/">VISIT THIS PAGE</button>
 							
 					</div>
-				</div>
-
-				</div>
-					
-<!-- CONTACT FORM --!>
-			<div id="contact" style="width: 100%;">		
-				<h2 style="font-size: 60px; margin-top: 15px; text-align: center;">CONTACT</h2>
-				<div class="h-divider" style="width: 500px; margin-top: -45px; margin-bottom: 30px; min-width: 500px;"></div>
-			</div>
-			
-		</div>
-		<div class="flex-about">
-			<div class="headbox" style="width: 500px; padding-bottom: 20px;" align="center">
-				<form id="contact-form" action="/" method="post">
-        		<h3 style="color: #1A2930; font-size: 28px; text-align: center;">GET IN TOUCH</h3>
-        		<div class="flex-about">
-<!-- TITLES --!>		
- 				<div style="padding-left: 10px; width: 220px; color: #1A2930;" align="left">       
-        			<div style="margin-top: 10px;">
-                		<label>
-                        	<span>Name: (required)</span>
-                		</label>
-        			</div>
-        			<div style="margin-top: 10px;">
-                		<label>
-                        	<span>Email: (required)</span>
-                		</label>
-        			</div>
-        			<div style="margin-top: 10px;">
-                		<label>
-                     	   <span>Message: (required)</span>
-                		</label>
-        			</div>
-        			
-        			</div>
-<!-- INPUT FIELDS--!>
-        			<div align="right" style="width: 150px; padding-right: 70px; ">
-        				<input style="margin-top: 10px; width: 150px;" align="right" placeholder="Please enter your name" type="text" tabindex="1" required >
-                		<input style="margin-top: 10px; width: 150px;" align="right" placeholder="Please enter your email address" type="email" tabindex="2" required>
-                		<textarea style="margin-top: 10px; width: 150px;" align="right" placeholder="Include all the details you can" tabindex="5" required></textarea>
+					<div class="port-image">
+						<a href="http://www.dentalcards.co.uk/">	
+						<img style="width: 100%; height: auto;" src="http://res.cloudinary.com/diohwb5lp/image/upload/v1480280214/Dentalcards_Web_iken9n.jpg"alt="Image of Sun Ra tribute page">
+						</a>
 					</div>
-					<button class="portbtn" name="submit" type="submit" id="contact-submit">Send Email</button>
-					</form>
-        			</div>
-        		
-		</div>
-</div>
-</body>
-</html>
+				</div>
 
+				</div>
+<!--GOOGLE FORM--!>
+<!--https://docs.google.com/forms/d/e/1FAIpQLSd6gCrzzokFdF9pLvehs7cQjXE7lhSHK3xeM-TMOorWdlPn9A/viewform?usp=pp_url&entry.778634323=john+doe&entry.1214835276=jdoe@gmail.com&entry.722502388=hello+please+make+me+a+website --!>
+<h2 style="width:100%">CONTACT</h2><br>
+<form name="googleform" id="googleform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSd6gCrzzokFdF9pLvehs7cQjXE7lhSHK3xeM-TMOorWdlPn9A/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+  First name:<br>
+  <input type="text" name="entry.778634323" id="entry.778634323" required><br>
+  Email<br>
+  <input type="text" name="entry.1214835276" id="entry.1214835276" required><br>
+  Message
+  <input type="text" name="entry.722502388" id="entry.722502388" required>
+  <input type="submit" value="Submit">
+</form>				
+
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+
+<script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+$('#googleform').on('submit', function(e) {
+  $('#googleform *').fadeOut(2000);
+  $('#googleform').prepend('Your submission has been processed...');
+  });
+</script>
+				
+				
 </body>
 </html>
