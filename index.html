@@ -44,13 +44,10 @@ function myPic(){
 window.onload =setTimeout(rest, 4000);
 function rest(){
      $(".content").fadeIn(1000);};
-/*CONTACT FORM SENDING TEXT*/
-var send = document.getElementById('contact-submit');
-if(send) {
-        send.onclick = function () {
-                this.innerHTML = '...Sending';
-        }
-}
+/*ENSURE PAGE ALWAYS SCROLLS TO TOP ON REFRESH*/
+$(window).on('beforeunload', function() {
+    $(window).scrollTop(0);
+});
 </script>
 </head>
 
@@ -71,15 +68,16 @@ if(send) {
 </ul>
 
 <!-- ABOUT --!>
-<div id="about"/>
+<div style="padding-top: 40px; margin-top: -40px;" id="about">
+</div>
 <div class="welcome">
 	<div>
 		<div class="welcome-text">
 			<div class="hello">
-				<h1 class="helloIn">HELLO</h1>
+				<h1 class="helloIn">WELCOME</h1>
 			</div>
 			<div class="h-divider2"></div>
-			<h2 class="helloIn2">WELCOME TO MY WEBSITE</h2>
+			<h2 class="helloIn2">TO MY PORTFOLIO WEBSITE</h2>
 		</div>	
 	</div>
 	<div>
@@ -94,7 +92,8 @@ if(send) {
 <div class="overlay"/>
 			
 <!-- THIS DIV IS FOR THE CONTENT FADE IN--!> 
-<div  id="portfolio"/>
+<div style="padding-top: 40px; margin-top: -40px;" id="portfolio">
+</div>
 	<div class="content">
 <!-- PORTFOLIO CONTENT --!>
 		<div class="flex-about">	
@@ -105,7 +104,7 @@ if(send) {
 				</div>
 
 <!-- ABOUT THIS PAGE--!>
-				<div class="flex-reverse">
+				<div class="flex-about">
 					<div class="port-text" style="margin-bottom: -10vw;">
 						<h2 style="font-size: 40px; text-align: left;">ABOUT THIS SITE</h2> 
 						<p style="text-align: justify;">My goal whilst creating this portfolio was to make a responsive website without bootstrap and further my understanding of HTML and CSS. My eventual goal is to remove all flex-box instances and use only @media queries to control what the page looks like on different screen sizes. It took me longer than expected, but was always enjoyable, and has made me appreciate just how powerful HTML and CSS really are.							
@@ -118,7 +117,7 @@ if(send) {
 				<div class="flex-about">
 					<div class="port-text">
 							<a class="port" href="http://www.cad-tec.co.uk/">	
-							<h2 style="text-align: left;">CAD-TEC</h2>
+							<h2 style="font-size: 40px; text-align: left;">CAD-TEC</h2>
 							</a>
 							<p style="text-align: justify;">This is the first website I made working as a freelancer, and what a great learning experience it was. I decided early in the project I wanted to use Bootstrap to demonstrate I could use the framework to a professional standard. It was only part way through the project the client and I felt a responsive design was the way to go, and I learnt the hard way why it's called "mobile-first". Overall, I learnt a huge amount working on this project, and am very proud of the finished product.
 							</P>
@@ -133,11 +132,10 @@ if(send) {
 			
 <!-- SUN RA TRIBUTE PAGE--!>
 
-				<div class="flex-reverse">
-					
+				<div class="flex-about">
 					<div class="port-text">
 							<a class="port" href="http://codepen.io/Zizou91/pen/BLXVMW">	
-							<h2 style="text-align: left;">SUN RA TRIBUTE PAGE</h2>
+							<h2 style="font-size: 40px; text-align: left;">SUN RA TRIBUTE PAGE</h2>
 							</a>
 							<p style="text-align: justify;">I put this website together as part of a project on Free Code Camp. It was the first website I designed using bootstrap, and the goal was to demonstrate aspects I had been utilising in previous exercises. In particular, I wanted to use the responsive grid system and image thumbnails to create an article that might be found on a music blog. While creating this page, I learnt a lot about the strengths and limitations of using a framework and the importance of having a clear design brief before starting.
 							</P>
@@ -168,8 +166,7 @@ if(send) {
 					</div>
 				</div>		
 <!-- DENTAL CARDS WEBSITE --!>
-				<div class="flex-reverse" >
-					
+				<div class="flex-about">
 					<div class="port-text">
 							<a class="port" href="http://www.dentalcards.co.uk/">	
 							<h2 style="font-size: 40px; text-align: left;">DENTAL CARDS SITE</h2>
@@ -190,17 +187,25 @@ if(send) {
 
 				</div>
 <!--GOOGLE FORM--!>
+<div id="contact"/>
 <!--https://docs.google.com/forms/d/e/1FAIpQLSd6gCrzzokFdF9pLvehs7cQjXE7lhSHK3xeM-TMOorWdlPn9A/viewform?usp=pp_url&entry.778634323=john+doe&entry.1214835276=jdoe@gmail.com&entry.722502388=hello+please+make+me+a+website --!>
-<h2 style="width:100%">CONTACT</h2><br>
-<form name="googleform" id="googleform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSd6gCrzzokFdF9pLvehs7cQjXE7lhSHK3xeM-TMOorWdlPn9A/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-  First name:<br>
-  <input type="text" name="entry.778634323" id="entry.778634323" required><br>
-  Email<br>
-  <input type="text" name="entry.1214835276" id="entry.1214835276" required><br>
-  Message
-  <input type="text" name="entry.722502388" id="entry.722502388" required>
-  <input type="submit" value="Submit">
-</form>				
+<div class="flex-about">
+	<div class="port-text">
+		<h2 style="font-size: 40px;">CONTACT</h2>
+		<br>
+	
+	<form name="googleform" id="googleform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSd6gCrzzokFdF9pLvehs7cQjXE7lhSHK3xeM-TMOorWdlPn9A/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+		<span style="display:inline-block; padding-right:10px;">
+			<input style="width:90%;" type="text" name="entry.778634323" id="entry.778634323" placeholder="Name" required>
+		</span>
+		<span style="display:inline-block; padding-left:10px;">
+			<input style="width:90%" type="text" name="entry.1214835276" id="entry.1214835276" placeholder="Email Address" required>
+		</span>
+			<input type="text" name="entry.722502388" id="entry.722502388" placeholder="Message" required>
+			<input type="submit" value="Submit">
+	</form>	
+	<div>
+</div>			
 
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 
@@ -212,7 +217,12 @@ $('#googleform').on('submit', function(e) {
   $('#googleform').prepend('Your submission has been processed...');
   });
 </script>
-				
+</div>
+
+<div class="footer flex-about">
+	<p style="text-align: left; width: 45vw;">Joshua Gray 2017</p>
+	<p style="text-align: right; width: 45vw;">All external content belongs to the respective owner</p>			
+</div>				
 				
 </body>
 </html>
