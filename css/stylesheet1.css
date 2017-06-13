@@ -1,0 +1,395 @@
+/* NAVIGATION BAR */
+ul.topnav {
+	width: 100%;
+    list-style-type: none;
+    margin: 0px;
+    padding 0px;
+    overflow: hidden;
+    background: linear-gradient(#0a161c, black);
+    position: fixed; 
+    top: 0;
+    left: 0;
+    height: 60px;
+    z-index: 2;
+}
+
+ul.topnav li {float: left;}
+
+/* Link Style */
+ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 20px;
+    margin-top: -4px;
+}
+/* Link Hover */
+ul.topnav li a:hover {background-color: #555;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+  
+  p {
+font-size: 4vw !important;
+}
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+  .welcome {
+  background-image: none !important;
+  height: 400px !important;
+  }
+  
+  .welcome-text {
+  position: relative;
+  padding-top: 15%;
+  text-align: center !important;
+  display: table-cell;
+  color: rgb(209,80,23);
+  font-weight: bold;
+  height: auto;
+  width: 50vw !important;
+  left: 25vw !important;
+  }
+  
+  .portfolio-button-container {
+  position: relative;
+  text-align: center;
+  padding-top: 35%;
+  left: 40vw;
+  display: table-cell;
+  color: rgb(209,80,23);
+  font-weight: bold;
+  height: auto;
+  width: auto;
+  
+  
+  }
+}
+@media screen and (max-width:1000px) {  
+.port-text {
+ width: 80vw !important;
+ margin-bottom: -80px !important;
+ }
+ 
+ .port-image {
+ width: 80vw !important; 
+ height: auto !important;
+ min-width: 80vw !important; 
+ margin-bottom: 20px !important;
+}
+
+.port-text {
+ width: 80vw !important; 
+ height: auto !important;
+ min-width: 80vw !important;
+ margin-bottom: 10px !important; 
+}
+
+h2 {
+
+margin: 0px;
+color: rgb(209,80,23);
+font-size: 5vw !important;
+}
+
+}
+
+
+
+
+
+/* REST OF THE PAGE*/
+body {
+    font-family: oswald, Geneva;
+    background-image: url("http://res.cloudinary.com/diohwb5lp/image/upload/v1496332365/asanoha-400px.png") !important;
+    background-attachment: fixed;
+    color: #0a161c;
+    margin: 0;
+}
+
+
+/* css for image and text at the top of the screen*/
+.welcome {
+  width:100vw;
+  height: 100vh;
+  margin: 0px;
+  padding 0px;
+  margin-top: 60px;
+  display: table;
+  position: relative;
+  background:  url("http://res.cloudinary.com/diohwb5lp/image/upload/v1496438503/portfoliomesat.jpg") no-repeat;
+  background-size : 100% auto;
+  text-align: center;
+}
+
+.welcome-text {
+  position: relative;
+  padding-top: 15%;
+  left: 100%;
+  display: table-cell;
+  font-weight: bold;
+  height: auto;
+  width: 45vw;
+  }
+  
+.portfolio-button-container {
+  position: relative;
+  text-align: center;
+  padding-top: 35%;
+  left: 40vw;
+  display: table-cell;
+  color: rgb(209,80,23);
+  font-weight: bold;
+  height: auto;
+  width: auto;
+  }
+
+.portfolio-arrow {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  display: none;
+  }
+
+.portfolio-button-fade {
+ font-size: 5vw;
+ display: none;
+ }
+
+
+.portfolio-title {
+  width: 100%;
+  text-align: left;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.flex-about {
+  display: flex;
+  
+  /* Then we define the flow direction and if we allow the items to wrap 
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: row wrap;
+  
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+}
+
+.flex-reverse {
+  display: flex;
+  
+  /* Then we define the flow direction and if we allow the items to wrap 
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: row wrap-reverse;
+  
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+}
+/*transparent box
+.headbox { 
+background-color: rgba(197,193,192,0.3); 
+*/
+
+}
+/*Horizontal Divider*/
+.h-divider{
+ height:1px;
+ width:100%;
+ border-top:1px solid gray;
+}
+
+.h-divider2{
+ height:1px;
+ width:100%;
+ border-top:1px solid gray;
+ display: none;
+}
+
+.hello {
+	
+	/*font-weight: bold;*/
+	font-size: 5vw;
+	
+}
+
+
+
+/* classes to prep title text for JS fade-in*/
+.helloIn {
+	display:none;
+	
+	}
+	
+.helloIn2 {
+	display:none;
+	font-size: 5vw;
+	}
+
+.portfolioBody {
+	min-width: 500px;
+	
+}
+
+.content {
+ display: none;
+}
+
+a.port {
+font-size: 30px;
+color: white;
+text-decoration: none;
+}
+
+a.port:hover {
+color: #c5c1c0;
+}
+
+h2 {
+margin: 0px;
+color: rgb(209,80,23);
+}
+
+h1 {
+text-align: center; 
+margin: 0px;
+color: rgb(209,80,23);
+
+}
+
+.port-text {
+ width: 45vw
+ height: auto;
+ }
+ 
+.port-image {
+ max-width: 600px; 
+ height: 450px; 
+ min-width: 350px; 
+ padding: 0px;
+}
+
+.port-text {
+ max-width: 600px; 
+ height: 450px; 
+ min-width: 350px; 
+ padding: 0px;
+ }
+
+.portbtn {
+margin-top: 20px; 
+width: 200px; 
+height: 50px; 
+color: white; 
+background-color: #0a161c;
+font-size: 18px;
+margin-bottom: 0px;
+}
+
+/*CONTACT FORM*/
+input[type="text"]{
+width:100%;
+margin-top:10px;
+height:35px;
+margin-bottom:25px;
+padding:10px;
+border:3px solid #0a161c
+}
+
+textarea{
+width:100%;
+border:3px solid #0a161c;
+padding:10px;
+margin-bottom:25px;
+margin-top:10px;
+height:100px;
+resize:none;
+}
+
+input[type="submit"]{
+width:100%;
+height: 50px;
+padding:10px;
+color: white;
+background-color: #0a161c;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+font-family:oswald, Geneva;
+}
+
+input {
+    width: 400px;
+    padding: 0 20px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 20px;
+    
+}
+
+/*FOOTER*/
+.foot {
+width: 100vw;
+background-color: linear-gradient(black, #0a161c);
+color: white;
+}
