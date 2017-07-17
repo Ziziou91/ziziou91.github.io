@@ -6,58 +6,21 @@
     <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
 	<meta name="viewport" content="initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="css/stylesheet2.css">  
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
     
 <!--Javascript starts here--!>  
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script>
-/*header js*/
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
 
- /*hello fade in*/   
-window.onload =setTimeout(mySec, 1000);
-function mySec(){
-    $(".helloIn").fadeIn(1000);};
-/*divider fade in*/
-window.onload = setTimeout(myThi, 1500);
-function myThi(){
-    $(".h-divider2").fadeIn(1000);};
-/*welcome message fade in*/
-window.onload =setTimeout(myFunction, 2500);
-function myFunction(){
-     $(".helloIn2").fadeIn(1000);};
-/*portfolio text fade in*/
-window.onload =setTimeout(myPort, 3500);
-function myPort(){
-     $(".portfolio-button-fade").fadeIn(1000);};
-/*portfolio arrow fade in*/
-window.onload =setTimeout(myPic, 4000);
-function myPic(){
-     $(".portfolio-arrow").fadeIn(1000);};     
-/*rest of the page fade in*/
-window.onload =setTimeout(rest, 4000);
-function rest(){
-     $(".content").fadeIn(1000);};
-/*ENSURE PAGE ALWAYS SCROLLS TO TOP ON REFRESH*/
-$(window).on('beforeunload', function() {
-    $(window).scrollTop(0);
-});
-</script>
 </head>
 
 <body>
 <!-- HEADER --!>
 <ul class="topnav navbarLink" id="myTopnav">
-  <li><a class="navbar-brand" href="#about" style="color: white; font-size: 28px; margin-top: -10px; margin-left: -35px; padding-right: 25px;">Joshua Gray</a></li>
-  <li><a href="#about">About</a></li>
-  <li><a href="#portfolio">Portfolio</a></li>
-  <li><a href="#contact">Contact</a></li>
+  <li><a class="navbar-brand about" style="color: white; font-size: 28px; margin-top: -5px; padding-right: 25px;">Joshua Gray</a></li>
+  <li class="about"><p>About</p></li>
+  <li class="portfoliolink"><p>Portfolio</p></li>
+  <li id="contact"><p>Contact</p></li>
   <li style="float:right; margin-right: 50px;"><a class="active" href="#about"><img style="width: 28px;" src="images/youtube.png"alt="Link to YouTube page"></a></li>
   <li style="float:right;"><a class="active" href="#about"><img style="width: 28px;" src="images/twitter.png"alt="Link to Twitter page"></a></li> 
   <li style="float:right;"><a class="active" href="https://www.linkedin.com/in/joshua-gray-421b75120?trk=hp-identity-name"><img style="width: 28px;" src="images/linkedin.png"alt="Link to LinkedIn page"></a></li>
@@ -82,9 +45,9 @@ $(window).on('beforeunload', function() {
 	</div>
 	<div>
 		<div class="portfolio-button-container">
-			<div class="portfolio-button"><a href="#portfolio" style="text-decoration: none;">
-				<h2 class="portfolio-button-fade" style="text-align: center;">Portfolio</h2>
-				<img class="portfolio-arrow" src="http://res.cloudinary.com/diohwb5lp/image/upload/v1496771179/down-arrow_o5phwd.png" alt="Link to YouTube page"></a>
+			<div class="portfolio-button">
+				<h2 class="portfolio-button-fade portfoliolink" style="text-align: center;">Portfolio</h2>
+				<img class="portfolio-arrow portfoliolink" src="http://res.cloudinary.com/diohwb5lp/image/upload/v1496771179/down-arrow_o5phwd.png" alt="Link to portfolio section">
 			</div>
 		</div>
 	</div>
@@ -92,7 +55,7 @@ $(window).on('beforeunload', function() {
 <div class="overlay"/>
 			
 <!-- THIS DIV IS FOR THE CONTENT FADE IN--!> 
-<div style="padding-top: 40px; margin-top: -40px;" id="portfolio">
+<div style="padding-top: 40px; margin-top: -40px;" id="portlink">
 </div>
 	<div class="content">
 <!-- PORTFOLIO CONTENT --!>
@@ -107,7 +70,7 @@ $(window).on('beforeunload', function() {
 				<div class="flex-about">
 					<div class="port-text" style="margin-bottom: -10vw;">
 						<h2 style="font-size: 40px; text-align: left;">ABOUT THIS SITE</h2> 
-						<p style="text-align: justify;">My goal whilst creating this portfolio was to make a responsive website without bootstrap and further my understanding of HTML and CSS. My eventual goal is to remove all flex-box instances and use only @media queries to control what the page looks like on different screen sizes. It took me longer than expected, but was always enjoyable, and has made me appreciate just how powerful HTML and CSS really are.							
+						<p style="text-align: justify;">My goal whilst creating this portfolio was to make a responsive website without bootstrap and further my understanding of HTML, CSS & jQuery. My eventual goal is to remove all flex-box instances and use only @media queries to control what the page looks like on different screen sizes. It took me longer than expected, but was always enjoyable, and has made me appreciate just how powerful HTML and CSS really are.							
 						</P>
 					</div>
 				</div>		
@@ -187,7 +150,7 @@ $(window).on('beforeunload', function() {
 
 				</div>
 <!--GOOGLE FORM--!>
-<div id="contact"/>
+<div id="contactlink"/>
 <!--https://docs.google.com/forms/d/e/1FAIpQLSd6gCrzzokFdF9pLvehs7cQjXE7lhSHK3xeM-TMOorWdlPn9A/viewform?usp=pp_url&entry.778634323=john+doe&entry.1214835276=jdoe@gmail.com&entry.722502388=hello+please+make+me+a+website --!>
 <div class="flex-about">
 	<div class="port-text">
